@@ -55,7 +55,14 @@ console.log('')
 // Contoh, jika menit adalah 63, maka function akan me-return "1:03".
 
 function konversiMenit(menit) {
-    // you can only write your code here!
+    const jam = Math.floor(menit / 60);
+    const menit1 = menit % 60;
+
+    if (menit1 < 10) {
+        return `${jam}:0${menit1}`;
+    } else {
+        return `${jam}:${menit1}`;
+    }
 }
 
 // TEST CASES
@@ -74,7 +81,17 @@ console.log('')
 //   Function akan me-return true jika jumlah karakter x sama dengan jumlah karakter o, dan false jika tidak.
 
 function xo(str) {
-    // you can only write your code here!
+    let x = 0;
+    let o = 0;
+
+    for (i = 0; i < str.length; i++) {
+        if (str[i] === 'x') {
+            x++;
+        } else {
+            o++;
+        }
+    }
+    return x === o;
 }
 
 // TEST CASES
